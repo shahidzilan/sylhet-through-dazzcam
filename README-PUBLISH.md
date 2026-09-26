@@ -22,10 +22,11 @@ GitHub Pages will serve it exactly like the local preview.
    Branch = **main**, folder = **/ (root)** → **Save**.
 5. Wait 1–2 minutes, then open:
    ```
-   https://USER.github.io/REPO/?view=1
+   https://USER.github.io/REPO/
    ```
-   That is the link you send friends. `?view=1` hides the
-   photo-picker toolbar so visitors only see the book.
+   That is the link you send friends. The photo-picker toolbar
+   stays hidden automatically; add `?edit=1` to the URL when
+   *you* want the editing controls back.
 
 ## Updating later
 

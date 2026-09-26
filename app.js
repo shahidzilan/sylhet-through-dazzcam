@@ -17,9 +17,9 @@
   var photoURLs = [];
   var layoutSeed = 0;
 
-  // Viewer mode for the published link (?view=1): hides the authoring toolbar
-  // so friends just see the book.
-  if (/[?#]view=1/.test(location.search + location.hash)) {
+  // The authoring toolbar (photo picker, title field) stays hidden unless
+  // ?edit=1 is in the URL — friends opening the plain link just see the book.
+  if (!/[?#]edit=1/.test(location.search + location.hash)) {
     var toolbar = document.querySelector(".toolbar");
     if (toolbar) toolbar.style.display = "none";
   }
