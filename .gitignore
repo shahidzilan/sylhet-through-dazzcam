@@ -1,0 +1,4 @@
+# Publishing excludes: local tooling and the single-file copy.
+node_modules/
+share/
+package-lock.json

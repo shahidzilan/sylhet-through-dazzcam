@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sylhet through DazzCam</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .toolbar {
+      width: min(100%, 1100px);
+      margin: 0 auto 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 12px;
+      align-items: center;
+      justify-content: center;
+      font: 400 12px/1.4 Arial, Helvetica, sans-serif;
+      color: #6e7365;
+    }
+    .toolbar input[type="text"] {
+      font: inherit;
+      padding: 6px 10px;
+      border: 1px solid #dcdfd5;
+      border-radius: 8px;
+      min-width: 200px;
+    }
+    .toolbar label.pick {
+      border: 1px solid #dcdfd5;
+      background: #fff;
+      border-radius: 999px;
+      padding: 7px 14px;
+      cursor: pointer;
+    }
+    .toolbar button {
+      border: 1px solid #dcdfd5;
+      background: #fff;
+      border-radius: 999px;
+      padding: 7px 14px;
+      cursor: pointer;
+    }
+    .toolbar small { width: 100%; text-align: center; color: #969b8f; }
+  </style>
+</head>
+<body>
+<main class="room">
+  <header class="book-header book-header--solo">
+    <h1 id="book-title-heading">Sylhet through DazzCam</h1>
+  </header>
+  <div class="toolbar" aria-label="Add photos">
+    <input id="title-input" type="text" value="Sylhet through DazzCam" aria-label="Book title">
+    <label class="pick" for="file-input">Add your photos…</label>
+    <input id="file-input" type="file" accept="image/*" multiple hidden>
+    <button id="shuffle" type="button">Shuffle layout</button>
+    <small id="photo-count">Drop JPG / PNG files into assets/photos, then run start.bat — or pick files here for an instant preview. No upload, everything stays on your PC.</small>
+  </div>
+  <section class="stage" aria-label="Interactive photo book">
+    <div class="book-rig">
+      <div id="book" class="book" data-page-width="512" data-page-height="640">
+        <article class="book-page art-page cloth recto cover-collage" data-density="hard" aria-label="Front cover">
+          <div class="cover-grid" id="cover-grid" aria-hidden="true"></div>
+          <div class="cover-shade" aria-hidden="true"></div>
+          <h2 class="cover-title">Sylhet through DazzCam</h2>
+        </article>
+        <article class="book-page art-page endpaper verso" aria-label="Page 1"></article>
+        <article class="book-page art-page paper recto" aria-label="Page 2">
+          <div class="title-block"><h2>My Photo Flipbook</h2><p>Pick photos above, or drop them into assets/photos and refresh.</p></div>
+        </article>
+        <article class="book-page art-page paper verso" aria-label="Page 3"></article>
+        <article class="book-page art-page paper recto" aria-label="Page 4">
+          <figure class="plate medium"><!-- Your photos appear here. --></figure>
+        </article>
+        <article class="book-page art-page paper verso" aria-label="Page 5">
+          <div class="colophon"><p>Sylhet through DazzCam</p></div>
+        </article>
+        <article class="book-page art-page endpaper recto" aria-label="Page 6"></article>
+        <article class="book-page art-page cloth verso" data-density="hard" aria-label="Back cover"></article>
+      </div>
+    </div>
+  </section>
+  <footer class="controls" aria-label="Book controls">
+    <button id="previous" type="button" aria-label="Previous page">←</button>
+    <div class="status" aria-live="polite"><span id="page-status">Cover</span><small>Drag or use arrow keys</small></div>
+    <button id="next" type="button" aria-label="Next page">→</button>
+  </footer>
+</main>
+<script src="vendor/page-flip.browser.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
